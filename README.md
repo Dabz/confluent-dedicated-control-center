@@ -15,3 +15,20 @@ docker-compose up -d
 sleep 10
 firefox localhost:9021
 ```
+
+### Important configuration files
+<details>
+<summary>Confluent Controler Center properties</summary>
+<pre>
+bootstrap.servers=c3_kafka:9092
+zookeeper.connect=c3_zoo:2181
+</pre>
+</details>
+
+<details>
+<summary>Application Apache Kafka Broker</summary>
+<pre>
+confluent.metrics.reporter.bootstrap.servers=c3_kafka:9092
+metric.reporters=io.confluent.metrics.reporter.ConfluentMetricsReporter
+</pre>
+</details>
